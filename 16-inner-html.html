@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Параграф</p>
+<div>Div</div>
+
+<script>
+    alert( document.body.innerHTML ); // читаем текущее содержимое
+    document.body.innerHTML = 'Новый BODY!'; // заменяем содержимое
+</script>
+
+<!--В Internet Explorer версии 9 и ранее, innerHTML доступно только для чтения для элементов COL, COLGROUP, FRAMESET, HEAD, HTML, STYLE, TABLE, TBODY, TFOOT, THEAD, TITLE, TR.-->
+<!---->
+<!--В частности, в IE9- запрещена запись в innerHTML для любых табличных элементов, кроме ячеек (TD/TH).-->
+<!--Добавление innerHTML+= осуществляет перезапись-->
+</body>
+</html>

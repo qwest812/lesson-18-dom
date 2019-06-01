@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>Первый</div>
+<div>Второй</div>
+<div>Третий</div>
+<script>
+    var first = document.body.children[0];
+    var second = document.body.children[1];
+    var third = document.body.children[2];
+
+    // реди детей parentElem удаляет elem и вставляет на его место newElem.
+    document.body.replaceChild(first,third)
+</script>
+</body>
+</html>

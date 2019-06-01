@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="content-holder">
+    <div id="content">Элемент</div>
+</div>
+
+<script>
+    alert( content ); // DOM-элемент
+    alert( window['content-holder'] ); // в имени дефис, поэтому через [...]
+</script>
+<!--Это поведение соответствует стандарту. Оно существует, в первую очередь, для совместимости, как осколок далёкого прошлого и не очень приветствуется, поскольку использует глобальные переменные. Браузер пытается помочь нам, смешивая пространства имён JS и DOM, но при этом возможны конфликты.-->
+
+<script>
+    var elem = document.getElementById('content');
+
+    elem.style.background = 'red';
+
+    alert( elem == content ); // true
+
+    content.style.background = ""; // один и тот же элемент
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+http://code.mu/tasks/javascript/dom/osnovy-raboty-s-dom-v-javascript.html
+
+home
+1-создать слайдер
+2- карусель
+3-генератор сайтов

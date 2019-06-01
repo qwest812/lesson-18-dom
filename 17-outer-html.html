@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>Привет <b>Мир</b></div>
+
+<script>
+    var div = document.body.children[0];
+
+    alert( div.outerHTML ); // <div>Привет <b>Мир</b></div>
+</script>
+
+
+<!--Изменить outerHTML элемента невозможно.-->
+<!---->
+<!--Здесь мы остановимся чуть подробнее. Дело в том, что технически свойство outerHTML доступно на запись. Но при этом элемент не меняется, а заменяется на новый, который тут же создаётся из нового outerHTML.-->
+<!---->
+<!--При этом переменная, в которой изначально был старый элемент, и в которой мы «перезаписали» outerHTML, остаётся со старым элементом.-->
+
+
+<!--<div>Привет, Мир!</div>-->
+<!---->
+<script>
+    // var div = document.body.children[0];
+    //
+    // заменяем div.outerHTML на <p>...</p>
+    // div.outerHTML = '<p>Новый элемент!</p>';
+
+    // ... но содержимое div.outerHTML осталось тем же, несмотря на "перезапись"
+    // alert( div.outerHTML ); // <div>Привет, Мир!</div>
+   </script>
+</body>
+</html>

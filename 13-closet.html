@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--работает не во всех браузерах-->
+<!--Метод elem.closest(css) ищет ближайший элемент выше по иерархии DOM, подходящий под CSS-селектор css. Сам элемент тоже включается в поиск.-->
+<ul>
+    <li class="chapter">Глава I
+        <ul>
+            <li class="subchapter">Глава <span class="num">1.1</span></li>
+            <li class="subchapter">Глава <span class="num">1.2</span></li>
+        </ul>
+    </li>
+</ul>
+
+<script>
+    var numberSpan = document.querySelector('.num');
+
+    // ближайший элемент сверху подходящий под селектор li
+    alert(numberSpan.closest('li').className) // subchapter
+
+    // ближайший элемент сверху подходящий под селектор .chapter
+    alert(numberSpan.closest('.chapter').tagName) // LI
+
+    // ближайший элемент сверху, подходящий под селектор span
+    // это сам numberSpan, так как поиск включает в себя сам элемент
+    alert(numberSpan.closest('span') === numberSpan) // true
+</script>
+</body>
+</html>

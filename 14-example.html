@@ -1,0 +1,60 @@
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+<form name="search">
+    <label>Поиск по сайту:
+        <input type="text" name="search">
+    </label>
+    <input type="submit" value="Искать!">
+</form>
+
+<hr>
+
+<form name="search-person">
+    Поиск по посетителям:
+    <table id="age-table">
+        <tr>
+            <td>Возраст:</td>
+            <td id="age-list">
+                <label>
+                    <input type="radio" name="age" value="young">до 18</label>
+                <label>
+                    <input type="radio" name="age" value="mature">18-50</label>
+                <label>
+                    <input type="radio" name="age" value="senior">более 50</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Дополнительно:</td>
+            <td>
+                <input type="text" name="info[0]">
+                <input type="text" name="info[1]">
+                <input type="text" name="info[2]">
+            </td>
+        </tr>
+
+    </table>
+
+    <input type="submit" value="Искать!">
+</form>
+<script>
+    let labeles = document.querySelectorAll("table label")
+    console.log(labeles);
+    let age_table= document.getElementById("age-table");
+    console.log(age_table.rows[0].cells[0]);
+    console.log(document.getElementsByTagName("form")[1]);
+    console.log(document.querySelector("form[name=search-person]"));
+    console.log(document.getElementsByName("search-person")[0]);
+    console.log(document.getElementsByName("info[0]")[0]);
+    document.querySelector("form[name=search-person] > input")
+</script>
+</body>
+
+</html>

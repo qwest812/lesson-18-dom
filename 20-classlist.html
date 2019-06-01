@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body class="main page">
+<script>
+    var classList = document.body.classList;
+
+    classList.remove('page'); // удалить класс
+    classList.add('post'); // добавить класс
+
+    for (var i = 0; i < classList.length; i++) { // перечислить классы
+        alert( classList[i] ); // main, затем post
+    }
+
+    alert( classList.contains('post') ); // проверить наличие класса
+
+    alert( document.body.className ); // main post, тоже работает
+
+    // elem.classList.toggle("class") – если класса class нет, добавляет его, если есть – удаляет.
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<!--Напиcать функцию showNotification(options), которая показывает уведомление, пропадающее через 2 сек.-->
+<!--/**-->
+<!--* Показывает уведомление, пропадающее через 2 сек-->
+<!--*-->
+<!--* @param options.top {number} вертикальный отступ, в px-->
+<!--* @param options.right {number} правый отступ, в px-->
+<!--* @param options.сolor {string} строка цвета-->
+<!--* @param options.className {string} CSS-класс-->
+<!--* @param options.html {string} HTML-текст для показа-->
+<!--*/-->
+<!--function showNotification(options) {-->
+<!--// ваш код-->
+<!--}-->
+
+<div class="test" id="example" style="color: #00CD00; top: 150px; right: 400px"> text for example</div>
+<div id="message">ss</div>
+<script>
+    function showNotification(options) {
+        let el= document.getElementById(options);
+        let message =document.getElementById("message");
+        let top =  el.style.top;
+        let right = el.style.right;
+        let color = el.style.color;
+        let classList= el.classList[0];
+        let myhtml = el.innerHTML;
+        message.innerHTML="top: "+top +"<br> right: "+right+"<br>color: "+color+"<br>class: "+classList+"text: "+myhtml;
+        setTimeout(function () {
+            message.hidden=true;
+        },2000);
+        console.log(top);
+        console.log(right);
+        console.log(color);
+        console.log(classList);
+        console.log(myhtml);
+    }
+
+    showNotification("example");
+</script>
+
+</body>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+</html>

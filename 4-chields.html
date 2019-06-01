@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>Начало</div>
+
+<ul>
+    <li>Информация</li>
+</ul>
+
+<div>Конец</div>
+
+<script>
+    for (var i = 0; i < document.body.childNodes.length; i++) {
+        console.log(document.body.childNodes[i]);  // Text, DIV, Text, UL, ..., SCRIPT
+    }
+</script>
+<div>test</div>
+
+
+firstChild
+lastChild
+previousSibling
+nextSibling
+
+<!--без техт-->
+children – только дочерние узлы-элементы, то есть соответствующие тегам.
+firstElementChild, lastElementChild – соответственно, первый и последний дети-элементы.
+previousElementSibling, nextElementSibling – соседи-элементы.
+parentElement – родитель-элемент.
+
+<!--alert( document.documentElement.parentNode ); // document-->
+<!--alert( document.documentElement.parentElement ); // null-->
+<!--Иногда это имеет значение, если хочется перебрать всех предков и вызвать какой-то метод, а на документе его нет.-->
+
+
+children вместо childNodes
+children  работает в IE8
+<script>
+    for (var i = 0; i < document.body.children.length; i++) {
+        alert( document.body.children[i] ); // DIV, UL, DIV, SCRIPT
+    }
+</script>
+elem.firstElementChild === elem.children[0]
+elem.lastElementChild === elem.children[elem.children.length - 1]
+В IE8- в children присутствуют узлы-комментарии
+</body>
+</body>
+</html>

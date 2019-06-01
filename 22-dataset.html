@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="elem" data-about="Elephant" data-user-location="street">
+    По улице прошёлся слон. Весьма красив и толст был он.
+</div>
+<script>
+    alert( elem.getAttribute('data-about') ); // Elephant
+    alert( elem.getAttribute('data-user-location') ); // street
+</script>
+
+
+
+<!--При этом во всех браузерах, кроме IE10-, к таким атрибутам можно обратиться не только как к атрибутам, но и как к свойствам, при помощи специального свойства dataset:-->
+<!--<div id="elem" data-about="Elephant" data-user-location="street">-->
+    <!--По улице прошёлся слон. Весьма красив и толст был он.-->
+<!--</div>-->
+<script>
+    // alert( elem.dataset.about ); // Elephant
+    // alert( elem.dataset.userLocation ); // street
+</script>
+</body>
+</html>

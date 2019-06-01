@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--table.rows – коллекция строк TR таблицы.-->
+
+<!--table.caption/tHead/tFoot – ссылки на элементы таблицы CAPTION, THEAD, TFOOT.-->
+
+<!--table.tBodies – коллекция элементов таблицы TBODY, по спецификации их может быть несколько.-->
+
+<!--tbody.rows – коллекция строк TR секции.-->
+
+<!--tr.cells – коллекция ячеек TD/TH-->
+
+<!--tr.sectionRowIndex – номер строки в текущей секции THEAD/TBODY-->
+
+<!--tr.rowIndex – номер строки в таблице-->
+
+<!--td.cellIndex – номер ячейки в строке-->
+
+<table>
+    <tr>
+        <td>один</td> <td>два</td>
+    </tr>
+    <tr>
+        <td>три</td>  <td>четыре</td>
+    </tr>
+</table>
+
+<script>
+    var table = document.body.children[0];
+
+    alert( table.rows[0].cells[0].innerHTML ) // "один"
+</script>
+</body>
+</html>
